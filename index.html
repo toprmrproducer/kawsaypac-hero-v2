@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kawsaypac — Journey Hero v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:auto; }
+  body { background:#0d1410; font-family:'Jost',sans-serif; }
+
+  /* NAV — liquid glass pill */
+  .nav {
+    position:fixed; top:18px; left:50%; transform:translateX(-50%);
+    z-index:100; display:flex; align-items:center; gap:28px;
+    padding:12px 14px 12px 26px; border-radius:999px;
+    background:rgba(255,255,255,0.72);
+    -webkit-backdrop-filter:blur(18px) saturate(1.4); backdrop-filter:blur(18px) saturate(1.4);
+    box-shadow:0 1px 0 rgba(255,255,255,.7) inset, 0 8px 30px rgba(10,20,12,.18);
+    border:1px solid rgba(255,255,255,.55);
+  }
+  .nav .brand { font-family:'Cormorant Garamond',serif; font-weight:600; letter-spacing:.12em; font-size:17px; color:#1d2b20; }
+  .nav .brand small { display:block; font-family:'Jost'; font-weight:400; font-size:8.5px; letter-spacing:.28em; color:#5c6b5e; }
+  .nav a { text-decoration:none; color:#22301f; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; }
+  .nav .cta { background:#1c3a24; color:#f2efe6; padding:10px 20px; border-radius:999px; font-size:11.5px; letter-spacing:.14em; }
+
+  /* HERO shell */
+  #hero { position:relative; width:100%; min-width:100vw; height:100vh; overflow:hidden; background:#0d1410; }
+  .scene { position:absolute; inset:0; overflow:hidden; }
+  .scene.feather { -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 9%); mask-image:linear-gradient(to bottom, transparent 0%, #000 9%); }
+  .layer { position:absolute; will-change:transform; }
+  .layer img { display:block; width:100%; height:100%; object-fit:cover; }
+  .plate { inset:-6% -3%; width:106%; height:112%; }
+  .plate img { width:100%; height:100%; object-fit:cover; }
+
+  /* registered full-canvas segments: all share the exact same box, so they always re-assemble */
+  .reg { inset:-6% -3%; width:106%; height:112%; }
+  .reg img { width:100%; height:100%; object-fit:cover; object-position:center; }
+
+  /* SCENE TEXT */
+  .copy { position:absolute; z-index:40; left:6vw; top:26vh; max-width:560px; color:#fff; }
+  .copy .alt { font-size:10.5px; letter-spacing:.3em; text-transform:uppercase; opacity:.85; margin-bottom:14px; text-shadow:0 1px 12px rgba(0,0,0,.5); }
+  .copy h1, .copy .h {
+    font-family:'Cormorant Garamond',serif; font-weight:500; line-height:.95;
+    font-size:clamp(56px, 7.2vw, 108px); letter-spacing:.01em;
+    text-shadow:0 2px 30px rgba(20,30,20,.45), 0 0 80px rgba(255,240,210,.25);
+  }
+  .copy .h em { font-style:italic; color:#e9c46a; }
+  .copy p { margin-top:18px; font-weight:300; font-size:15px; line-height:1.6; max-width:400px; text-shadow:0 1px 10px rgba(0,0,0,.55); }
+  .copy .scroll { margin-top:26px; font-size:10px; letter-spacing:.3em; text-transform:uppercase; opacity:.8; }
+  .halo { position:absolute; left:-8%; top:-12%; width:120%; height:130%; z-index:-1;
+    background:radial-gradient(ellipse at 35% 40%, rgba(24,30,22,.42) 0%, rgba(24,30,22,.18) 45%, transparent 72%); border-radius:50%; filter:blur(8px); }
+
+  #copy2 { top:auto; bottom:16vh; }
+  #copy3 { top:auto; bottom:14vh; }
+
+  /* progress rail */
+  .rail { position:fixed; right:26px; top:50%; transform:translateY(-50%); z-index:90; color:#fff;
+    display:flex; flex-direction:column; align-items:center; gap:10px; font-size:9px; letter-spacing:.25em; }
+  .rail .bar { width:2px; height:120px; background:rgba(255,255,255,.25); border-radius:2px; position:relative; }
+  .rail .bar i { position:absolute; top:0; left:0; width:100%; height:0%; background:#e9c46a; border-radius:2px; }
+  .rail span { writing-mode:vertical-rl; }
+
+  .after { min-height:120vh; background:#f7f3ea; display:flex; align-items:center; justify-content:center; }
+  .after h2 { font-family:'Cormorant Garamond',serif; font-size:44px; color:#22301f; font-weight:500; }
+
+  @media (prefers-reduced-motion: reduce) { .layer { transform:none !important; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">KAWSAYPAC<small>ANCESTRAL HERBS</small></div>
+  <a href="#">Shop by Concern</a><a href="#">Philosophy</a><a href="#">Retreats</a><a href="#">Apothecary</a><a href="#">Our Story</a>
+  <a class="cta" href="#">SHOP HERBS</a>
+</nav>
+
+<div class="rail"><span>COTOPAXI → AMAZON</span><div class="bar"><i id="railFill"></i></div></div>
+
+<section id="hero">
+
+  <!-- SCENE 1 · SUMMIT (registered segments C1→C4, one canvas, no seams possible) -->
+  <div class="scene" id="scene1">
+    <div class="layer reg" id="s1-c1" style="z-index:1"><img src="assets/C1-upper-sky-sunrise.png" alt=""></div>
+    <div class="layer reg" id="s1-c3" style="z-index:2"><img src="assets/C3-left-ridge.png" alt=""></div>
+    <div class="layer reg" id="s1-c4" style="z-index:3"><img src="assets/C4-valley-right-ridge.png" alt=""></div>
+    <div class="layer reg" id="s1-c2" style="z-index:4"><img src="assets/C2-central-volcano-clouds.png" alt=""></div>
+    <div class="copy" id="copy1" style="z-index:30">
+      <div class="halo"></div>
+      <div class="alt">5,897 M · COTOPAXI, ECUADOR</div>
+      <h1 class="h">Heal<br>yourself,<br><em>Kawsaypac.</em></h1>
+      <p>Begin at the summit. Follow living water through the Andes and into the Amazon.</p>
+      <div class="scroll">SCROLL TO DESCEND ——</div>
+    </div>
+  </div>
+
+  <!-- SCENE 2 · VALLEY (keyed components over the valley sky plate) -->
+  <div class="scene feather" id="scene2" style="visibility:hidden">
+    <div class="layer plate" id="s2-sky" style="z-index:1"><img src="assets/v-sky-plate.jpg" alt=""></div>
+    <div class="layer" id="s2-peaks" style="z-index:2; left:8%; right:8%; top:34%; height:16%"><img src="assets/v-far-peaks.png" style="object-fit:contain; object-position:center bottom" alt=""></div>
+    <div class="layer" id="s2-mistFar" style="z-index:3; left:-4%; top:42%; width:108%; height:22%; opacity:1; mix-blend-mode:screen"><img src="assets/v-mist.png" style="object-fit:cover" alt=""></div>
+    <!-- v-ridge-right's subject sits bottom-LEFT of its canvas → it is the LEFT wall (cut edges go off-frame left+bottom).
+         v-ridge-left's subject sits bottom-RIGHT of its canvas → it is the RIGHT wall (cut edges off-frame right+bottom). -->
+    <div class="layer" id="s2-ridgeL" style="z-index:4; left:-10%; bottom:-16%; width:58%; height:76%"><img src="assets/v-ridge-right.png" style="object-fit:contain; object-position:left bottom" alt=""></div>
+    <div class="layer" id="s2-ridgeR" style="z-index:4; right:-10%; bottom:-16%; width:58%; height:76%"><img src="assets/v-ridge-left.png" style="object-fit:contain; object-position:right bottom" alt=""></div>
+    <div class="layer" id="s2-river" style="z-index:5; left:36%; bottom:-8%; width:28%; height:42%"><img src="assets/v-river.png" style="object-fit:contain; object-position:center bottom" alt=""></div>
+    <div class="layer" id="s2-mist" style="z-index:6; left:-4%; bottom:22%; width:108%; height:22%; opacity:.55; mix-blend-mode:screen"><img src="assets/v-mist.png" style="object-fit:cover" alt=""></div>
+    <div class="layer" id="s2-meadow" style="z-index:7; left:-2%; bottom:-10%; width:104%; height:26%"><img src="assets/v-meadow.png" style="object-fit:cover; object-position:center top" alt=""></div>
+    <div class="layer" id="s2-flowers" style="z-index:8; left:1%; bottom:-3%; width:19%; height:30%"><img src="assets/v-wildflowers.png" style="object-fit:contain; object-position:left bottom" alt=""></div>
+    <div class="copy" id="copy2" style="z-index:30; opacity:0">
+      <div class="halo"></div>
+      <div class="alt">3,100 M · THE LIVING VALLEY</div>
+      <div class="h">Where water<br><em>remembers.</em></div>
+      <p>Glacial rivers feed the paramo. The paramo feeds everything we harvest.</p>
+    </div>
+  </div>
+
+  <!-- SCENE 3 · JUNGLE (registered segments J1→J4) -->
+  <div class="scene feather" id="scene3" style="visibility:hidden">
+    <div class="layer plate" id="s3-plate" style="z-index:1"><img src="assets/j-depth-plate.jpg" alt=""></div>
+    <div class="layer reg" id="s3-j1" style="z-index:2"><img src="assets/J1-upper-left-canopy.png" alt=""></div>
+    <div class="layer reg" id="s3-j2" style="z-index:3"><img src="assets/J2-upper-right-toucan-canopy.png" alt=""></div>
+    <div class="layer reg" id="s3-j4" style="z-index:4"><img src="assets/J4-lower-right-orchid-ferns.png" alt=""></div>
+    <div class="layer reg" id="s3-j3" style="z-index:5"><img src="assets/J3-lower-left-snake-branch.png" alt=""></div>
+    <div class="copy" id="copy3" style="z-index:30; opacity:0">
+      <div class="halo"></div>
+      <div class="alt">AMAZON BASIN · ECUADOR</div>
+      <div class="h">Where the Andes<br>become <em>Amazon.</em></div>
+      <p>Every blend is wildcrafted here, with the communities who have always known these plants.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="after"><h2>— homepage sections continue below —</h2></section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+function initHero() {
+const mm = gsap.matchMedia();
+mm.add("(prefers-reduced-motion: no-preference)", () => {
+
+  const tl = gsap.timeline({
+    scrollTrigger: { trigger:"#hero", start:"top top", end:"+=420%", scrub:0.6, pin:true }
+  });
+
+  /* ---------- SCENE 1 (0 → .30): summit holds, layers breathe apart as we begin descending ---------- */
+  /* registered segments must stay near-registered: tiny divergence only */
+  tl.to("#s1-c2", { yPercent:-4, scale:1.03, ease:"none", duration:.30 }, 0);
+  tl.to("#s1-c3", { yPercent:-6, scale:1.04, ease:"none", duration:.30 }, 0);
+  tl.to("#s1-c4", { yPercent:-5, scale:1.04, ease:"none", duration:.30 }, 0);
+  tl.to("#s1-c1", { yPercent:-2, ease:"none", duration:.30 }, 0);
+  tl.to("#copy1", { opacity:0, y:-40, ease:"power1.in", duration:.08 }, .20);
+
+  /* ---------- TRANSITION 1 (.30 → .40): scene1 rises away, scene2 rises in from below ---------- */
+  tl.set("#scene2", { visibility:"visible" }, .28);
+  tl.fromTo("#scene2", { yPercent:100 }, { yPercent:0, ease:"none", duration:.12 }, .30);
+  tl.to("#scene1", { yPercent:-38, ease:"none", duration:.12 }, .30);
+  tl.set("#scene1", { visibility:"hidden" }, .43);
+
+  /* ---------- SCENE 2 (.40 → .62): valley parallax ---------- */
+  tl.fromTo("#s2-peaks",  { yPercent:3 },  { yPercent:-2,  ease:"none", duration:.24 }, .40);
+  tl.fromTo("#s2-mistFar",{ xPercent:3 },  { xPercent:-3,  ease:"none", duration:.24 }, .40);
+  tl.fromTo("#s2-ridgeL", { yPercent:6 },  { yPercent:-3,  ease:"none", duration:.24 }, .40);
+  tl.fromTo("#s2-ridgeR", { yPercent:6 },  { yPercent:-3,  ease:"none", duration:.24 }, .40);
+  tl.fromTo("#s2-river",  { yPercent:9 },  { yPercent:-4,  ease:"none", duration:.24 }, .40);
+  tl.fromTo("#s2-mist",   { xPercent:-4 }, { xPercent:4,   ease:"none", duration:.24 }, .40);
+  tl.fromTo("#s2-meadow", { yPercent:12 }, { yPercent:-6,  ease:"none", duration:.24 }, .40);
+  tl.fromTo("#s2-flowers",{ yPercent:15 }, { yPercent:-8,  ease:"none", duration:.24 }, .40);
+  tl.to("#copy2", { opacity:1, y:-14, ease:"power1.out", duration:.06 }, .43);
+  tl.to("#copy2", { opacity:0, y:-40, ease:"power1.in", duration:.06 }, .56);
+
+  /* ---------- TRANSITION 2 (.62 → .72): valley rises away, jungle rises in ---------- */
+  tl.set("#scene3", { visibility:"visible" }, .60);
+  tl.fromTo("#scene3", { yPercent:100 }, { yPercent:0, ease:"none", duration:.12 }, .62);
+  tl.to("#scene2", { yPercent:-38, ease:"none", duration:.12 }, .62);
+  tl.set("#scene2", { visibility:"hidden" }, .75);
+
+  /* ---------- SCENE 3 (.72 → 1): jungle parallax + text ---------- */
+  tl.fromTo("#s3-j1", { yPercent:5, scale:1.05 }, { yPercent:-4, scale:1.0, ease:"none", duration:.28 }, .72);
+  tl.fromTo("#s3-j2", { yPercent:7 },  { yPercent:-5, ease:"none", duration:.28 }, .72);
+  tl.fromTo("#s3-j4", { yPercent:10 }, { yPercent:-7, ease:"none", duration:.28 }, .72);
+  tl.fromTo("#s3-j3", { yPercent:13 }, { yPercent:-9, ease:"none", duration:.28 }, .72);
+  tl.to("#copy3", { opacity:1, y:-14, ease:"power1.out", duration:.07 }, .78);
+
+  /* rail */
+  gsap.to("#railFill", { height:"100%", ease:"none",
+    scrollTrigger:{ trigger:"#hero", start:"top top", end:"+=420%", scrub:true } });
+});
+ScrollTrigger.refresh();
+}
+
+if (document.readyState === 'complete') initHero();
+else window.addEventListener('load', initHero);
+
+/* image guard */
+document.querySelectorAll('img').forEach(im => im.addEventListener('error', () => { im.style.background='linear-gradient(135deg,#1c3a24,#3a5a40)'; }));
+</script>
+</body>
+</html>
