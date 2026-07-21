@@ -15,7 +15,7 @@
     position:fixed; top:18px; left:50%; transform:translateX(-50%);
     z-index:100; display:flex; align-items:center; gap:28px;
     padding:12px 14px 12px 26px; border-radius:999px;
-    background:rgba(255,255,255,0.72);
+    background:rgba(255,255,255,0.9);
     -webkit-backdrop-filter:blur(18px) saturate(1.4); backdrop-filter:blur(18px) saturate(1.4);
     box-shadow:0 1px 0 rgba(255,255,255,.7) inset, 0 8px 30px rgba(10,20,12,.18);
     border:1px solid rgba(255,255,255,.55);
@@ -54,8 +54,11 @@
   .rail .bar i { position:absolute; top:0; left:0; width:100%; height:0%; background:#e9c46a; border-radius:2px; }
   .rail span { writing-mode:vertical-rl; }
 
-  .after { min-height:120vh; background:#f7f3ea; display:flex; align-items:center; justify-content:center; }
-  .after h2 { font-family:'Cormorant Garamond',serif; font-size:44px; color:#22301f; font-weight:500; }
+  #kwBody { background:#f7f3ea; }
+  /* global reveal system (progressive enhancement: visible without JS) */
+  .kw-reveal { opacity:1; }
+  .js .kw-reveal { opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1); }
+  .js .kw-reveal.in { opacity:1; transform:none; }
 
   @media (prefers-reduced-motion: reduce) { .grp, .lyr { transform:none !important; opacity:1 !important; } }
 </style>
@@ -135,7 +138,1932 @@
   </div>
 </section>
 
-<section class="after"><h2>— homepage sections continue below —</h2></section>
+<main id="kwBody">
+<section id="kwc-collections" class="kwc-section" aria-labelledby="kwc-heading">
+  <div class="kwc-inner">
+    <header class="kwc-head kw-reveal">
+      <p class="kwc-eyebrow">Our Collections</p>
+      <div class="kwc-headrow">
+        <h2 id="kwc-heading" class="kwc-heading">Blends from the <em>living</em> land</h2>
+        <span class="kwc-cup" aria-hidden="true">
+          <img src="assets/site/img/gen/chip_cup.jpg" alt="" loading="lazy">
+        </span>
+      </div>
+      <p class="kwc-lede">Every blend begins as loose leaf, bark and root, gathered in the Ecuadorian Amazon and prepared the way it has been for generations. Choose the bowl that speaks to what your body is asking for.</p>
+    </header>
+
+    <ul class="kwc-grid">
+      <li class="kwc-item kw-reveal">
+        <a class="kwc-card" href="https://theelectriceats.com/collections/all">
+          <span class="kwc-bowl"><img src="assets/site/img/gen/bowl_digestive.jpg" alt="Ceramic bowl of loose digestive herbs" loading="lazy"></span>
+          <h3 class="kwc-name">Digestive</h3>
+          <p class="kwc-desc">Settle, soothe and move what has been sitting heavy.</p>
+        </a>
+      </li>
+      <li class="kwc-item kw-reveal" style="transition-delay:.08s">
+        <a class="kwc-card" href="https://theelectriceats.com/collections/all">
+          <span class="kwc-bowl"><img src="assets/site/img/gen/bowl_energy.jpg" alt="Ceramic bowl of loose energising herbs" loading="lazy"></span>
+          <h3 class="kwc-name">Energy and Focus</h3>
+          <p class="kwc-desc">Clean, steady lift from guayusa, without the crash.</p>
+        </a>
+      </li>
+      <li class="kwc-item kw-reveal" style="transition-delay:.16s">
+        <a class="kwc-card" href="https://theelectriceats.com/collections/all">
+          <span class="kwc-bowl"><img src="assets/site/img/gen/bowl_womens.jpg" alt="Ceramic bowl of loose herbs for womb and fertility" loading="lazy"></span>
+          <h3 class="kwc-name">Womb and Fertility</h3>
+          <p class="kwc-desc">Ancestral care for cycles, balance and new life.</p>
+        </a>
+      </li>
+      <li class="kwc-item kw-reveal" style="transition-delay:.24s">
+        <a class="kwc-card" href="https://theelectriceats.com/collections/all">
+          <span class="kwc-bowl"><img src="assets/site/img/gen/bowl_sleep.jpg" alt="Ceramic bowl of loose calming herbs for sleep" loading="lazy"></span>
+          <h3 class="kwc-name">Rest and Sleep</h3>
+          <p class="kwc-desc">Valerian and passionflower to quiet the evening mind.</p>
+        </a>
+      </li>
+      <li class="kwc-item kw-reveal" style="transition-delay:.32s">
+        <a class="kwc-card" href="https://theelectriceats.com/collections/all">
+          <span class="kwc-bowl"><img src="assets/site/img/gen/bowl_detox.jpg" alt="Ceramic bowl of loose cleansing herbs" loading="lazy"></span>
+          <h3 class="kwc-name">Detox and Lymph</h3>
+          <p class="kwc-desc">Gentle daily clearing for liver, kidneys and lymph.</p>
+        </a>
+      </li>
+      <li class="kwc-item kw-reveal" style="transition-delay:.4s">
+        <a class="kwc-card" href="https://theelectriceats.com/collections/all">
+          <span class="kwc-bowl"><img src="assets/site/img/gen/bowl_immune.jpg" alt="Ceramic bowl of loose immunity herbs" loading="lazy"></span>
+          <h3 class="kwc-name">Immune and Vitality</h3>
+          <p class="kwc-desc">Cat's claw and rainforest allies to keep you strong.</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="kwp-philosophy" class="kwp-philosophy" aria-labelledby="kwp-heading">
+  <div class="kwp-inner">
+    <header class="kwp-head kw-reveal">
+      <p class="kwp-eyebrow">Our Philosophy</p>
+      <h2 class="kwp-heading" id="kwp-heading">Plants first. <em>People</em> always.</h2>
+      <p class="kwp-lede">Every blend begins with a relationship: with the land, with the families who tend it, and with the person it is made for.</p>
+    </header>
+
+    <ul class="kwp-grid" role="list">
+      <li class="kwp-card kw-reveal">
+        <div class="kwp-plate"><img src="assets/site/img/gen/apoth_cats_claw.jpg" alt="Cat's claw bark on a ceramic plate" loading="lazy" width="120" height="120"></div>
+        <h3 class="kwp-card-title">Wildcrafted at the source</h3>
+        <p class="kwp-card-body">Hand-harvested in the Andes and Amazon, where these plants have grown wild for generations.</p>
+      </li>
+      <li class="kwp-card kw-reveal" style="transition-delay:.1s">
+        <div class="kwp-plate"><img src="assets/site/img/gen/apoth_guayusa.jpg" alt="Dried guayusa leaves on a ceramic plate" loading="lazy" width="120" height="120"></div>
+        <h3 class="kwp-card-title">Direct partnership</h3>
+        <p class="kwp-card-body">We buy directly from Kichwa families. Fair, personal, and built on years of trust.</p>
+      </li>
+      <li class="kwp-card kw-reveal" style="transition-delay:.2s">
+        <div class="kwp-plate"><img src="assets/site/img/gen/apoth_cinchona.jpg" alt="Cinchona bark pieces on a ceramic plate" loading="lazy" width="120" height="120"></div>
+        <h3 class="kwp-card-title">Whole botanicals</h3>
+        <p class="kwp-card-body">Never extracts, never fillers. The whole leaf, bark, and root, exactly as nature made it.</p>
+      </li>
+      <li class="kwp-card kw-reveal" style="transition-delay:.3s">
+        <div class="kwp-plate"><img src="assets/site/img/gen/apoth_passionflower.jpg" alt="Dried passionflower on a ceramic plate" loading="lazy" width="120" height="120"></div>
+        <h3 class="kwp-card-title">Small batches</h3>
+        <p class="kwp-card-body">Blended when you order and shipped fresh, so nothing sits on a shelf losing its life.</p>
+      </li>
+    </ul>
+
+    <figure class="kwp-band kw-reveal">
+      <img class="kwp-band-img" src="assets/site/img/amazon-river-2.jpg" alt="The Amazon river winding through Ecuadorian rainforest" loading="lazy">
+      <figcaption class="kwp-band-caption">
+        <p class="kwp-band-statement">From the river to your cup, nothing added and nothing taken away.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="kwb-best-sellers" class="kwb-section" aria-labelledby="kwb-heading">
+  <div class="kwb-inner">
+    <header class="kwb-head kw-reveal">
+      <p class="kwb-eyebrow">Most Loved</p>
+      <div class="kwb-head-row">
+        <h2 id="kwb-heading" class="kwb-heading">The blends our community <em>reaches for</em></h2>
+        <div class="kwb-arrows">
+          <button type="button" class="kwb-arrow" id="kwb-prev" aria-label="Previous products" aria-controls="kwb-track">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="kwb-arrow" id="kwb-next" aria-label="Next products" aria-controls="kwb-track">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="kwb-track kw-reveal" id="kwb-track" tabindex="0" role="region" aria-label="Best selling blends carousel" style="transition-delay:.1s">
+
+      <article class="kwb-card">
+        <a class="kwb-media" href="https://theelectriceats.com/products/zapped-in" tabindex="-1" aria-hidden="true">
+          <img src="assets/site/img/blend-zapped-in-2.webp" alt="Zapped In herbal blend pouch" loading="lazy">
+        </a>
+        <h3 class="kwb-name"><a href="https://theelectriceats.com/products/zapped-in">Zapped In</a></h3>
+        <p class="kwb-benefit">Steady plant powered energy without the crash</p>
+        <div class="kwb-row">
+          <span class="kwb-price">$34.00</span>
+          <a class="kwb-shop" href="https://theelectriceats.com/products/zapped-in">Shop</a>
+        </div>
+      </article>
+
+      <article class="kwb-card">
+        <a class="kwb-media" href="https://theelectriceats.com/products/bowel-balance" tabindex="-1" aria-hidden="true">
+          <img src="assets/site/img/blend-bowel-balance.webp" alt="Bowel Balance herbal blend pouch" loading="lazy">
+        </a>
+        <h3 class="kwb-name"><a href="https://theelectriceats.com/products/bowel-balance">Bowel Balance</a></h3>
+        <p class="kwb-benefit">Gentle daily support for a calm, settled gut</p>
+        <div class="kwb-row">
+          <span class="kwb-price">$28.50</span>
+          <a class="kwb-shop" href="https://theelectriceats.com/products/bowel-balance">Shop</a>
+        </div>
+      </article>
+
+      <article class="kwb-card">
+        <a class="kwb-media" href="https://theelectriceats.com/products/sacred-sacral-sweetened" tabindex="-1" aria-hidden="true">
+          <img src="assets/site/img/blend-sacred-sacral.webp" alt="Sacred Sacral herbal blend pouch" loading="lazy">
+        </a>
+        <h3 class="kwb-name"><a href="https://theelectriceats.com/products/sacred-sacral-sweetened">Sacred Sacral</a></h3>
+        <p class="kwb-benefit">Ancestral nourishment for feminine balance</p>
+        <div class="kwb-row">
+          <span class="kwb-price">$28.50</span>
+          <a class="kwb-shop" href="https://theelectriceats.com/products/sacred-sacral-sweetened">Shop</a>
+        </div>
+      </article>
+
+      <article class="kwb-card">
+        <a class="kwb-media" href="https://theelectriceats.com/products/river-of-life" tabindex="-1" aria-hidden="true">
+          <img src="assets/site/img/blend-river-of-life.webp" alt="River of Life herbal blend pouch" loading="lazy">
+        </a>
+        <h3 class="kwb-name"><a href="https://theelectriceats.com/products/river-of-life">River of Life</a></h3>
+        <p class="kwb-benefit">A cleansing current for kidneys and flow</p>
+        <div class="kwb-row">
+          <span class="kwb-price">$34.00</span>
+          <a class="kwb-shop" href="https://theelectriceats.com/products/river-of-life">Shop</a>
+        </div>
+      </article>
+
+      <article class="kwb-card">
+        <a class="kwb-media" href="https://theelectriceats.com/products/scales-of-balance" tabindex="-1" aria-hidden="true">
+          <img src="assets/site/img/blend-scales-of-balance-2.webp" alt="Scales of Balance herbal blend pouch" loading="lazy">
+        </a>
+        <h3 class="kwb-name"><a href="https://theelectriceats.com/products/scales-of-balance">Scales of Balance</a></h3>
+        <p class="kwb-benefit">Steadying herbs for liver, skin and clarity</p>
+        <div class="kwb-row">
+          <span class="kwb-price">$28.50</span>
+          <a class="kwb-shop" href="https://theelectriceats.com/products/scales-of-balance">Shop</a>
+        </div>
+      </article>
+
+      <article class="kwb-card">
+        <a class="kwb-media" href="https://theelectriceats.com/products/eliminate-regenerate" tabindex="-1" aria-hidden="true">
+          <img src="assets/site/img/blend-eliminate-regenerate.webp" alt="Eliminate and Regenerate herbal cleanse set" loading="lazy">
+        </a>
+        <h3 class="kwb-name"><a href="https://theelectriceats.com/products/eliminate-regenerate">Eliminate &amp; Regenerate</a></h3>
+        <p class="kwb-benefit">The complete deep cleanse and rebuild ritual</p>
+        <div class="kwb-row">
+          <span class="kwb-price">$113.00</span>
+          <a class="kwb-shop" href="https://theelectriceats.com/products/eliminate-regenerate">Shop</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="kws-shop-by-concern" class="kws-section" aria-labelledby="kws-heading">
+  <div class="kws-inner">
+    <header class="kws-head kw-reveal">
+      <p class="kws-eyebrow">Shop by Concern</p>
+      <h2 id="kws-heading" class="kws-heading">Begin with what your body is <em>asking for</em></h2>
+      <p class="kws-sub">Every blend answers a need. Choose the concern closest to yours and we will guide you to the herbs our families have trusted for generations.</p>
+    </header>
+    <ul class="kws-grid" role="list">
+      <li class="kws-item kw-reveal">
+        <a class="kws-card" href="https://theelectriceats.com/products/bowel-balance" aria-label="Digestion. Explore Bowel Balance">
+          <span class="kws-bowl"><img src="assets/site/img/gen/bowl_digestive.jpg" alt="Herbal blend bowl for digestion" loading="lazy" width="400" height="400"></span>
+          <span class="kws-name">Digestion</span>
+          <span class="kws-explore">Explore</span>
+        </a>
+      </li>
+      <li class="kws-item kw-reveal" style="transition-delay:.08s">
+        <a class="kws-card" href="https://theelectriceats.com/products/zapped-in" aria-label="Energy and Focus. Explore Zapped In">
+          <span class="kws-bowl"><img src="assets/site/img/gen/bowl_energy.jpg" alt="Herbal blend bowl for energy and focus" loading="lazy" width="400" height="400"></span>
+          <span class="kws-name">Energy &amp; Focus</span>
+          <span class="kws-explore">Explore</span>
+        </a>
+      </li>
+      <li class="kws-item kw-reveal" style="transition-delay:.16s">
+        <a class="kws-card" href="https://theelectriceats.com/products/sacred-sacral-sweetened" aria-label="Womb Health. Explore Sacred Sacral">
+          <span class="kws-bowl"><img src="assets/site/img/gen/bowl_womens.jpg" alt="Herbal blend bowl for womb health" loading="lazy" width="400" height="400"></span>
+          <span class="kws-name">Womb Health</span>
+          <span class="kws-explore">Explore</span>
+        </a>
+      </li>
+      <li class="kws-item kw-reveal" style="transition-delay:.05s">
+        <a class="kws-card" href="https://theelectriceats.com/products/valerian" aria-label="Sleep and Calm. Explore Valerian Root">
+          <span class="kws-bowl"><img src="assets/site/img/gen/bowl_sleep.jpg" alt="Herbal blend bowl for sleep and calm" loading="lazy" width="400" height="400"></span>
+          <span class="kws-name">Sleep &amp; Calm</span>
+          <span class="kws-explore">Explore</span>
+        </a>
+      </li>
+      <li class="kws-item kw-reveal" style="transition-delay:.13s">
+        <a class="kws-card" href="https://theelectriceats.com/products/eliminate-regenerate" aria-label="Detox. Explore Eliminate and Regenerate">
+          <span class="kws-bowl"><img src="assets/site/img/gen/bowl_detox.jpg" alt="Herbal blend bowl for detox" loading="lazy" width="400" height="400"></span>
+          <span class="kws-name">Detox</span>
+          <span class="kws-explore">Explore</span>
+        </a>
+      </li>
+      <li class="kws-item kw-reveal" style="transition-delay:.21s">
+        <a class="kws-card" href="https://theelectriceats.com/products/river-of-life" aria-label="Circulation and Immunity. Explore River of Life">
+          <span class="kws-bowl"><img src="assets/site/img/gen/bowl_immune.jpg" alt="Herbal blend bowl for circulation and immunity" loading="lazy" width="400" height="400"></span>
+          <span class="kws-name">Circulation &amp; Immunity</span>
+          <span class="kws-explore">Explore</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="retreats" class="kwr-retreats" aria-labelledby="kwr-heading">
+  <div class="kwr-inner">
+    <div class="kwr-text">
+      <div class="kwr-sticky">
+        <p class="kwr-eyebrow kw-reveal">Ecuador Retreats</p>
+        <h2 id="kwr-heading" class="kwr-heading kw-reveal" style="transition-delay:.08s">Come to <em>the source.</em></h2>
+        <p class="kwr-para kw-reveal" style="transition-delay:.16s">Some medicine cannot be shipped. Each year, Raisa and Brian open their home in Ecuador to a small group of guests who want to meet the plants where they grow, in the soil and the rain that made them.</p>
+        <p class="kwr-para kw-reveal" style="transition-delay:.22s">Days move slowly here. You will walk the forest with Kichwa healers who name each leaf as an old friend, sit in ceremony as their families have for generations, and drink guayusa brewed over a morning fire.</p>
+        <p class="kwr-para kw-reveal" style="transition-delay:.28s">Between plant walks and waterfall visits, there is time to rest, ask questions, and simply be in the Amazon. Our next retreat gathers this August, and spaces are intentionally few.</p>
+        <a class="kwr-cta kw-reveal" style="transition-delay:.34s" href="mailto:hello@theelectriceats.com?subject=Retreat%20enquiry">Enquire about retreats</a>
+      </div>
+    </div>
+    <div class="kwr-collage" aria-label="Scenes from our Ecuador retreats">
+      <figure class="kwr-img kwr-img-tall kw-reveal">
+        <img src="assets/site/img/raisa-cotopaxi.jpg" alt="Raisa standing before Cotopaxi volcano in the Ecuadorian highlands" loading="lazy">
+      </figure>
+      <figure class="kwr-img kwr-img-medium kw-reveal" style="transition-delay:.15s">
+        <img src="assets/site/img/waterfall.jpg" alt="A waterfall cascading through the Ecuadorian cloud forest" loading="lazy">
+      </figure>
+      <figure class="kwr-img kwr-img-small kw-reveal" style="transition-delay:.28s">
+        <img src="assets/site/img/brian-shaman.jpg" alt="Brian in ceremony with a Kichwa healer" loading="lazy">
+      </figure>
+      <figure class="kwr-img kwr-img-tiny kw-reveal" style="transition-delay:.4s">
+        <img src="assets/site/img/kichwa-kids.jpg" alt="Kichwa children smiling in their village" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="kwt-community" class="kwt-community" aria-labelledby="kwt-heading">
+  <div class="kwt-inner">
+    <header class="kwt-head kw-reveal">
+      <p class="kwt-eyebrow">Community Stories</p>
+      <h2 id="kwt-heading" class="kwt-heading">Heard from the people <em>who brew with us</em></h2>
+      <p class="kwt-sub">Real voices from kitchens, porches and morning rituals across the world. These are the people who made Kawsaypac part of their day.</p>
+    </header>
+
+    <div class="kwt-video-row">
+      <article class="kwt-video-card kw-reveal" style="transition-delay:.05s">
+        <button type="button" class="kwt-video-facade" data-video="" aria-label="Play video story from Marisol, video coming soon">
+          <img src="assets/site/img/testimonials/testimonial-02.webp" alt="Marisol sharing her Kawsaypac story" loading="lazy">
+          <span class="kwt-play" aria-hidden="true"><span class="kwt-play-tri"></span></span>
+          <span class="kwt-video-name">Marisol V.</span>
+        </button>
+      </article>
+      <article class="kwt-video-card kw-reveal" style="transition-delay:.15s">
+        <button type="button" class="kwt-video-facade" data-video="" aria-label="Play video story from Daniel, video coming soon">
+          <img src="assets/site/img/testimonials/testimonial-03.webp" alt="Daniel sharing his Kawsaypac story" loading="lazy">
+          <span class="kwt-play" aria-hidden="true"><span class="kwt-play-tri"></span></span>
+          <span class="kwt-video-name">Daniel R.</span>
+        </button>
+      </article>
+      <article class="kwt-video-card kw-reveal" style="transition-delay:.25s">
+        <button type="button" class="kwt-video-facade" data-video="" aria-label="Play video story from Anita, video coming soon">
+          <img src="assets/site/img/testimonials/testimonial-04.webp" alt="Anita sharing her Kawsaypac story" loading="lazy">
+          <span class="kwt-play" aria-hidden="true"><span class="kwt-play-tri"></span></span>
+          <span class="kwt-video-name">Anita K.</span>
+        </button>
+      </article>
+    </div>
+
+    <div class="kwt-quote-row">
+      <article class="kwt-quote-card kwt-quote-card--thumb kw-reveal" style="transition-delay:.05s">
+        <div class="kwt-quote-thumb">
+          <img src="assets/site/img/testimonials/testimonial-07.webp" alt="Portrait of Elena, Kawsaypac customer" loading="lazy">
+        </div>
+        <div class="kwt-quote-body">
+          <div class="kwt-stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <blockquote class="kwt-quote-text">
+            <p>River of Life changed my mornings. I feel lighter, clearer, and I actually look forward to brewing it. My whole family asks for a cup now.</p>
+          </blockquote>
+          <p class="kwt-quote-name">Elena M.</p>
+        </div>
+      </article>
+
+      <article class="kwt-quote-card kw-reveal" style="transition-delay:.15s">
+        <div class="kwt-quote-body">
+          <div class="kwt-stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <blockquote class="kwt-quote-text">
+            <p>I have tried a lot of herbal blends over the years. Nothing has felt this honest. You can taste that these herbs were grown and picked with care.</p>
+          </blockquote>
+          <p class="kwt-quote-name">Thomas B.</p>
+        </div>
+      </article>
+
+      <article class="kwt-quote-card kw-reveal" style="transition-delay:.25s">
+        <div class="kwt-quote-body">
+          <div class="kwt-stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <blockquote class="kwt-quote-text">
+            <p>The Guayusa is my afternoon ritual now. Steady energy with no crash, and knowing it supports the Kichwa families who grow it makes every cup better.</p>
+          </blockquote>
+          <p class="kwt-quote-name">Priya S.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="kwt-modal" id="kwt-modal" role="dialog" aria-modal="true" aria-labelledby="kwt-modal-title" hidden>
+    <div class="kwt-modal-backdrop" data-kwt-close></div>
+    <div class="kwt-modal-panel" role="document">
+      <button type="button" class="kwt-modal-close" data-kwt-close aria-label="Close dialog">&times;</button>
+      <p class="kwt-modal-eyebrow">Community Stories</p>
+      <h3 id="kwt-modal-title" class="kwt-modal-title">Video <em>coming soon</em></h3>
+      <p class="kwt-modal-text">We are gathering video stories from our community right now. Check back shortly to hear them in their own words.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kwn-newsletter" class="kwn-band" aria-labelledby="kwn-heading">
+  <div class="kwn-card kw-reveal">
+    <p class="kwn-eyebrow">Stay close</p>
+    <h2 id="kwn-heading" class="kwn-heading">Letters from the <em class="kwn-accent">rainforest</em></h2>
+    <p class="kwn-sub">Harvest notes, new blends, and retreat dates. Once a month, nothing more.</p>
+    <form class="kwn-form" action="#" method="post" novalidate>
+      <label class="kwn-visually-hidden" for="kwn-email">Email address</label>
+      <input class="kwn-input" id="kwn-email" type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+      <button class="kwn-submit" type="submit">Subscribe</button>
+    </form>
+    <p class="kwn-thanks" role="status" aria-live="polite" hidden>Thank you. Your first letter is on its way with the next harvest.</p>
+  </div>
+</section>
+
+<footer id="kwf-footer" class="kwf-footer" aria-label="Site footer">
+  <img class="kwf-leaf kwf-leaf-left" src="assets/site/img/gen/fg_leaf_monstera.png" alt="" aria-hidden="true">
+  <img class="kwf-leaf kwf-leaf-right" src="assets/site/img/gen/fg_leaf_monstera.png" alt="" aria-hidden="true">
+  <div class="kwf-inner">
+    <div class="kwf-top kw-reveal">
+      <a class="kwf-brand" href="https://theelectriceats.com" aria-label="Kawsaypac home">
+        <img class="kwf-wordmark" src="assets/site/brand/kawsaypac-wordmark.svg" alt="Kawsaypac">
+      </a>
+      <p class="kwf-tag">Ancestral Amazonian herbs, wildcrafted with the Kichwa people of Ecuador.</p>
+    </div>
+    <nav class="kwf-cols kw-reveal" style="transition-delay:.1s" aria-label="Footer navigation">
+      <div class="kwf-col">
+        <h3 class="kwf-col-title">Shop</h3>
+        <ul class="kwf-list">
+          <li><a class="kwf-link" href="https://theelectriceats.com/collections/all">All Blends</a></li>
+          <li><a class="kwf-link" href="https://theelectriceats.com/collections/kits">Kits</a></li>
+          <li><a class="kwf-link" href="https://theelectriceats.com/collections/e-books">E-Books</a></li>
+        </ul>
+      </div>
+      <div class="kwf-col">
+        <h3 class="kwf-col-title">Learn</h3>
+        <ul class="kwf-list">
+          <li><a class="kwf-link" href="https://theelectriceats.com/pages/our-story">Our Story</a></li>
+          <li><a class="kwf-link" href="https://theelectriceats.com/pages/philosophy">Philosophy</a></li>
+          <li><a class="kwf-link" href="https://theelectriceats.com/blogs/journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="kwf-col">
+        <h3 class="kwf-col-title">Visit</h3>
+        <ul class="kwf-list">
+          <li><a class="kwf-link" href="https://theelectriceats.com/pages/retreats">Retreats</a></li>
+          <li><a class="kwf-link" href="https://theelectriceats.com/pages/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="kwf-col">
+        <h3 class="kwf-col-title">Follow</h3>
+        <ul class="kwf-list">
+          <li><a class="kwf-link" href="https://www.instagram.com/theelectriceats" rel="noopener" target="_blank">Instagram</a></li>
+          <li><a class="kwf-link" href="https://www.facebook.com/theelectriceats" rel="noopener" target="_blank">Facebook</a></li>
+          <li><a class="kwf-link" href="https://www.tiktok.com/@theelectriceats" rel="noopener" target="_blank">TikTok</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="kwf-bottom">
+      <p class="kwf-copy">&copy; 2026 The Electric Eats &middot; Kawsaypac</p>
+      <p class="kwf-origin">Wildcrafted in Ecuador</p>
+    </div>
+  </div>
+</footer>
+</main>
+<style>
+/* ============ OUR COLLECTIONS (kwc-) ============ */
+.kwc-section{
+  background:#f7f3ea;
+  padding:110px 6vw;
+}
+.kwc-inner{
+  max-width:1280px;
+  margin:0 auto;
+}
+
+/* Head */
+.kwc-head{
+  max-width:640px;
+  margin-bottom:64px;
+}
+.kwc-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:400;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 18px;
+}
+.kwc-headrow{
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+}
+.kwc-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(38px,4.6vw,58px);
+  line-height:.95;
+  color:#22301f;
+  margin:0 0 22px;
+}
+.kwc-heading em{
+  font-style:italic;
+  color:#b98a2e;
+}
+.kwc-cup{
+  flex:0 0 auto;
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  overflow:hidden;
+  margin-top:-14px;
+  box-shadow:0 10px 24px rgba(34,48,31,.14), inset 0 0 0 1px rgba(34,48,31,.06);
+  transform:rotate(4deg);
+}
+.kwc-cup img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.kwc-lede{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:1.7;
+  color:#4a544a;
+  margin:0;
+}
+
+/* Grid of bowls */
+.kwc-grid{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:40px 28px;
+}
+.kwc-item{margin:0;}
+.kwc-card{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  padding:8px 4px 16px;
+  min-height:48px;
+  border-radius:18px;
+  transition:transform .4s ease;
+}
+.kwc-bowl{
+  position:relative;
+  display:block;
+  width:min(170px,100%);
+  aspect-ratio:1/1;
+  margin:0 auto 20px;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:0 14px 30px rgba(34,48,31,.12);
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.kwc-bowl::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  box-shadow:inset 0 6px 18px rgba(34,48,31,.22), inset 0 0 0 1px rgba(34,48,31,.08);
+  pointer-events:none;
+}
+.kwc-bowl img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s ease;
+}
+.kwc-name{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:23px;
+  line-height:1.1;
+  color:#22301f;
+  margin:0 0 8px;
+  transition:color .4s ease;
+}
+.kwc-desc{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:14px;
+  line-height:1.55;
+  color:#4a544a;
+  margin:0 auto;
+  max-width:200px;
+}
+
+/* Hover: bowl lifts and gently rotates, shadow bloom, image breathes */
+@media (hover:hover){
+  .kwc-card:hover .kwc-bowl,
+  .kwc-card:focus-visible .kwc-bowl{
+    transform:translateY(-4px) rotate(2deg);
+    box-shadow:0 22px 44px rgba(34,48,31,.2);
+  }
+  .kwc-card:hover .kwc-bowl img,
+  .kwc-card:focus-visible .kwc-bowl img{
+    transform:scale(1.04);
+  }
+  .kwc-card:hover .kwc-name{
+    color:#b98a2e;
+  }
+}
+.kwc-card:focus-visible{
+  outline:2px solid #b98a2e;
+  outline-offset:4px;
+}
+
+/* Responsive: 6 across, then 3x2, then 2x3 */
+@media (max-width:1080px){
+  .kwc-section{padding:90px 6vw;}
+  .kwc-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:44px 24px;
+  }
+}
+@media (max-width:600px){
+  .kwc-section{padding:72px 6vw;}
+  .kwc-head{margin-bottom:48px;}
+  .kwc-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:40px 18px;
+  }
+  .kwc-cup{
+    width:60px;
+    height:60px;
+    margin-top:-6px;
+  }
+  .kwc-bowl{width:min(140px,100%);}
+  .kwc-name{font-size:20px;}
+  .kwc-desc{font-size:13.5px;}
+}
+
+.kwp-philosophy{
+  background:#fbf8f1;
+  padding:110px 6vw;
+}
+.kwp-inner{
+  max-width:1280px;
+  margin:0 auto;
+}
+.kwp-head{
+  max-width:640px;
+  margin:0 auto 72px;
+  text-align:center;
+}
+.kwp-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:400;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 18px;
+}
+.kwp-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(38px,4.6vw,58px);
+  line-height:.95;
+  color:#22301f;
+  margin:0 0 22px;
+}
+.kwp-heading em{
+  font-style:italic;
+  color:#b98a2e;
+}
+.kwp-lede{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:1.7;
+  color:#4a544a;
+  margin:0;
+}
+.kwp-grid{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
+}
+.kwp-card{
+  background:#f7f3ea;
+  border:1px solid rgba(34,48,31,.06);
+  border-radius:20px;
+  padding:38px 26px 34px;
+  text-align:center;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.kwp-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 40px rgba(34,48,31,.10);
+}
+.kwp-plate{
+  width:120px;
+  height:120px;
+  margin:0 auto 24px;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(34,48,31,.12);
+}
+.kwp-plate img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+.kwp-card:hover .kwp-plate img{
+  transform:scale(1.04);
+}
+.kwp-card-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:24px;
+  line-height:1.1;
+  color:#22301f;
+  margin:0 0 12px;
+}
+.kwp-card-body{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:15px;
+  line-height:1.65;
+  color:#4a544a;
+  margin:0;
+}
+.kwp-band{
+  position:relative;
+  margin:72px 0 0;
+  height:220px;
+  border-radius:24px;
+  overflow:hidden;
+}
+.kwp-band-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.kwp-band-caption{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.kwp-band-statement{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-style:italic;
+  font-size:clamp(20px,2.4vw,28px);
+  line-height:1.3;
+  color:#22301f;
+  text-align:center;
+  margin:0;
+  max-width:640px;
+  background:rgba(247,243,234,.82);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  border-radius:16px;
+  padding:18px 34px;
+  box-shadow:0 8px 28px rgba(34,48,31,.14);
+}
+@media (max-width:1000px){
+  .kwp-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media (max-width:560px){
+  .kwp-philosophy{
+    padding:80px 6vw;
+  }
+  .kwp-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .kwp-head{
+    margin-bottom:52px;
+  }
+  .kwp-band{
+    height:200px;
+    margin-top:52px;
+  }
+  .kwp-band-statement{
+    padding:14px 22px;
+  }
+}
+
+#kwb-best-sellers{
+  background:#f7f3ea;
+  padding:110px 6vw;
+}
+#kwb-best-sellers .kwb-inner{
+  max-width:1280px;
+  margin:0 auto;
+}
+#kwb-best-sellers .kwb-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:400;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 18px;
+}
+#kwb-best-sellers .kwb-head-row{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:32px;
+  margin-bottom:48px;
+}
+#kwb-best-sellers .kwb-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(34px,4.2vw,56px);
+  line-height:.95;
+  color:#22301f;
+  margin:0;
+  max-width:640px;
+}
+#kwb-best-sellers .kwb-heading em{
+  font-style:italic;
+  color:#b98a2e;
+}
+#kwb-best-sellers .kwb-arrows{
+  display:flex;
+  gap:12px;
+  flex-shrink:0;
+}
+#kwb-best-sellers .kwb-arrow{
+  width:48px;
+  height:48px;
+  min-height:48px;
+  border-radius:50%;
+  border:1px solid #22301f;
+  background:transparent;
+  color:#22301f;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:background .4s ease,color .4s ease,transform .4s ease,box-shadow .4s ease,opacity .4s ease;
+  padding:0;
+}
+#kwb-best-sellers .kwb-arrow:hover,
+#kwb-best-sellers .kwb-arrow:focus-visible{
+  background:#1c3a24;
+  border-color:#1c3a24;
+  color:#f7f3ea;
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(28,58,36,.18);
+}
+#kwb-best-sellers .kwb-arrow:focus-visible{
+  outline:2px solid #b98a2e;
+  outline-offset:3px;
+}
+#kwb-best-sellers .kwb-arrow[disabled]{
+  opacity:.35;
+  cursor:default;
+  background:transparent;
+  color:#22301f;
+  border-color:#22301f;
+  transform:none;
+  box-shadow:none;
+}
+#kwb-best-sellers .kwb-track{
+  display:flex;
+  gap:28px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding:6px 6px 26px;
+  margin:-6px -6px 0;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(122,133,111,.4) transparent;
+  -webkit-overflow-scrolling:touch;
+}
+#kwb-best-sellers .kwb-track::-webkit-scrollbar{
+  height:4px;
+}
+#kwb-best-sellers .kwb-track::-webkit-scrollbar-thumb{
+  background:rgba(122,133,111,.4);
+  border-radius:4px;
+}
+#kwb-best-sellers .kwb-track::-webkit-scrollbar-track{
+  background:transparent;
+}
+#kwb-best-sellers .kwb-track:focus-visible{
+  outline:2px solid #b98a2e;
+  outline-offset:4px;
+  border-radius:8px;
+}
+#kwb-best-sellers .kwb-card{
+  flex:0 0 clamp(240px,26vw,300px);
+  scroll-snap-align:start;
+  background:#fbf8f1;
+  border-radius:24px;
+  padding:14px 14px 22px;
+  box-shadow:0 2px 10px rgba(34,48,31,.05);
+  transition:transform .4s ease,box-shadow .4s ease;
+}
+#kwb-best-sellers .kwb-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 40px rgba(34,48,31,.12);
+}
+#kwb-best-sellers .kwb-media{
+  display:block;
+  aspect-ratio:4/5;
+  border-radius:20px;
+  overflow:hidden;
+  background:#f2ede1;
+}
+#kwb-best-sellers .kwb-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s ease;
+}
+#kwb-best-sellers .kwb-card:hover .kwb-media img{
+  transform:scale(1.05);
+}
+#kwb-best-sellers .kwb-name{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:24px;
+  line-height:1.1;
+  color:#22301f;
+  margin:18px 4px 6px;
+}
+#kwb-best-sellers .kwb-name a{
+  color:inherit;
+  text-decoration:none;
+  transition:color .4s ease;
+}
+#kwb-best-sellers .kwb-name a:hover,
+#kwb-best-sellers .kwb-name a:focus-visible{
+  color:#b98a2e;
+}
+#kwb-best-sellers .kwb-name a:focus-visible{
+  outline:2px solid #b98a2e;
+  outline-offset:2px;
+  border-radius:4px;
+}
+#kwb-best-sellers .kwb-benefit{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:15px;
+  line-height:1.5;
+  color:#4a544a;
+  margin:0 4px 16px;
+}
+#kwb-best-sellers .kwb-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin:0 4px;
+}
+#kwb-best-sellers .kwb-price{
+  font-family:'Jost',sans-serif;
+  font-weight:500;
+  font-size:16px;
+  color:#22301f;
+}
+#kwb-best-sellers .kwb-shop{
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:14px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#f7f3ea;
+  background:#1c3a24;
+  border-radius:999px;
+  min-height:48px;
+  padding:0 28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  transition:background .4s ease,transform .4s ease,box-shadow .4s ease;
+}
+#kwb-best-sellers .kwb-shop:hover,
+#kwb-best-sellers .kwb-shop:focus-visible{
+  background:#22301f;
+  transform:translateY(-4px);
+  box-shadow:0 12px 26px rgba(28,58,36,.25);
+}
+#kwb-best-sellers .kwb-shop:focus-visible{
+  outline:2px solid #b98a2e;
+  outline-offset:3px;
+}
+@media (max-width:720px){
+  #kwb-best-sellers{
+    padding:80px 5vw;
+  }
+  #kwb-best-sellers .kwb-head-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-bottom:36px;
+  }
+  #kwb-best-sellers .kwb-card{
+    flex:0 0 78vw;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  #kwb-best-sellers .kwb-track{
+    scroll-behavior:auto;
+  }
+  #kwb-best-sellers .kwb-card,
+  #kwb-best-sellers .kwb-media img,
+  #kwb-best-sellers .kwb-shop,
+  #kwb-best-sellers .kwb-arrow{
+    transition:none;
+  }
+}
+
+/* ===== Shop by Concern (kws-) ===== */
+#kws-shop-by-concern{
+  position:relative;
+  background:#f2ede1;
+  padding:110px 6vw 120px;
+}
+/* subtle transition from the previous (lighter) section */
+#kws-shop-by-concern::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height:140px;
+  background:linear-gradient(to bottom, #f7f3ea 0%, rgba(247,243,234,0) 100%);
+  pointer-events:none;
+}
+#kws-shop-by-concern .kws-inner{
+  position:relative;
+  max-width:1280px;
+  margin:0 auto;
+}
+
+/* Header */
+#kws-shop-by-concern .kws-head{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 72px;
+}
+#kws-shop-by-concern .kws-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:400;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 18px;
+}
+#kws-shop-by-concern .kws-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(34px, 4.2vw, 52px);
+  line-height:.95;
+  color:#22301f;
+  margin:0 0 22px;
+}
+#kws-shop-by-concern .kws-heading em{
+  font-style:italic;
+  color:#b98a2e;
+}
+#kws-shop-by-concern .kws-sub{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:1.65;
+  color:#4a544a;
+  margin:0;
+}
+
+/* Grid */
+#kws-shop-by-concern .kws-grid{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:56px 36px;
+}
+
+/* Card: whole thing clickable, generous tap target */
+#kws-shop-by-concern .kws-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  text-decoration:none;
+  padding:28px 20px 26px;
+  border-radius:18px;
+  min-height:48px;
+  transition:transform .4s ease, box-shadow .4s ease, background-color .4s ease;
+  cursor:pointer;
+}
+#kws-shop-by-concern .kws-card:hover,
+#kws-shop-by-concern .kws-card:focus-visible{
+  transform:translateY(-4px);
+  background:#fbf8f1;
+  box-shadow:0 18px 44px rgba(34,48,31,.12);
+}
+#kws-shop-by-concern .kws-card:focus-visible{
+  outline:2px solid #b98a2e;
+  outline-offset:3px;
+}
+
+/* Bowl: big circular image */
+#kws-shop-by-concern .kws-bowl{
+  display:block;
+  width:clamp(170px, 15vw, 210px);
+  height:clamp(170px, 15vw, 210px);
+  border-radius:50%;
+  overflow:hidden;
+  margin-bottom:26px;
+  box-shadow:0 10px 28px rgba(34,48,31,.10);
+  background:#e9e2d2;
+}
+#kws-shop-by-concern .kws-bowl img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.001);
+  transition:transform .4s ease;
+}
+#kws-shop-by-concern .kws-card:hover .kws-bowl img,
+#kws-shop-by-concern .kws-card:focus-visible .kws-bowl img{
+  transform:scale(1.04);
+}
+
+/* Concern name */
+#kws-shop-by-concern .kws-name{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:26px;
+  line-height:1.15;
+  color:#22301f;
+  margin-bottom:12px;
+}
+
+/* Explore link with animated underline */
+#kws-shop-by-concern .kws-explore{
+  position:relative;
+  display:inline-block;
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#b98a2e;
+  padding:6px 2px;
+}
+#kws-shop-by-concern .kws-explore::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:2px;
+  height:1px;
+  background:#b98a2e;
+  transform:scaleX(.35);
+  transform-origin:left center;
+  opacity:.45;
+  transition:transform .4s cubic-bezier(.22,1,.36,1), opacity .4s ease;
+}
+#kws-shop-by-concern .kws-card:hover .kws-explore::after,
+#kws-shop-by-concern .kws-card:focus-visible .kws-explore::after{
+  transform:scaleX(1);
+  opacity:1;
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  #kws-shop-by-concern{ padding:90px 6vw 100px; }
+  #kws-shop-by-concern .kws-grid{
+    grid-template-columns:repeat(2, 1fr);
+    gap:44px 24px;
+  }
+  #kws-shop-by-concern .kws-bowl{
+    width:clamp(150px, 24vw, 190px);
+    height:clamp(150px, 24vw, 190px);
+  }
+}
+@media (max-width: 560px){
+  #kws-shop-by-concern{ padding:76px 6vw 84px; }
+  #kws-shop-by-concern .kws-head{ margin-bottom:52px; }
+  #kws-shop-by-concern .kws-grid{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  #kws-shop-by-concern .kws-card{ padding:24px 16px 22px; }
+  #kws-shop-by-concern .kws-bowl{
+    width:200px;
+    height:200px;
+  }
+  #kws-shop-by-concern .kws-name{ font-size:24px; }
+}
+@media (prefers-reduced-motion: reduce){
+  #kws-shop-by-concern .kws-card,
+  #kws-shop-by-concern .kws-bowl img,
+  #kws-shop-by-concern .kws-explore::after{
+    transition:none;
+  }
+}
+
+.kwr-retreats{
+  background:linear-gradient(180deg,#fbf8f1 0%,#f2ede1 100%);
+  padding:110px 6vw;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+}
+.kwr-inner{
+  max-width:1280px;
+  margin:0 auto;
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(320px,460px) 1fr;
+  gap:clamp(48px,6vw,96px);
+  align-items:start;
+}
+.kwr-sticky{
+  position:sticky;
+  top:120px;
+}
+.kwr-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:400;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 22px;
+}
+.kwr-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(40px,4.6vw,64px);
+  line-height:.95;
+  color:#22301f;
+  margin:0 0 30px;
+}
+.kwr-heading em{
+  font-style:italic;
+  color:#b98a2e;
+}
+.kwr-para{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:1.7;
+  color:#4a544a;
+  margin:0 0 18px;
+  max-width:44ch;
+}
+.kwr-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:14px 38px;
+  margin-top:16px;
+  font-family:'Jost',sans-serif;
+  font-size:13px;
+  font-weight:400;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#b98a2e;
+  border:1px solid #b98a2e;
+  border-radius:999px;
+  text-decoration:none;
+  background:transparent;
+  transition:background-color .4s ease,color .4s ease,transform .4s ease,box-shadow .4s ease;
+}
+.kwr-cta:hover,
+.kwr-cta:focus-visible{
+  background:#b98a2e;
+  color:#fbf8f1;
+  transform:translateY(-4px);
+  box-shadow:0 14px 34px rgba(185,138,46,.28);
+}
+.kwr-cta:focus-visible{
+  outline:2px solid #22301f;
+  outline-offset:3px;
+}
+.kwr-collage{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:clamp(18px,2.2vw,28px);
+  align-items:start;
+}
+.kwr-img{
+  margin:0;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 18px 46px rgba(34,48,31,.12);
+  transition:transform .4s ease,box-shadow .4s ease;
+  background:#f2ede1;
+}
+.kwr-img:hover{
+  transform:translateY(-4px);
+  box-shadow:0 26px 60px rgba(34,48,31,.18);
+}
+.kwr-img img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+.kwr-img:hover img{
+  transform:scale(1.04);
+}
+.kwr-img-tall{
+  grid-column:1;
+  grid-row:1 / span 2;
+  aspect-ratio:3/4;
+}
+.kwr-img-medium{
+  grid-column:2;
+  grid-row:1;
+  aspect-ratio:4/3;
+  margin-top:clamp(36px,5vw,72px);
+}
+.kwr-img-small{
+  grid-column:2;
+  grid-row:2;
+  aspect-ratio:1/1;
+  width:78%;
+}
+.kwr-img-tiny{
+  grid-column:1;
+  grid-row:3;
+  aspect-ratio:4/3;
+  width:58%;
+  justify-self:end;
+  margin-top:clamp(-10px,-1vw,-4px);
+}
+@media (max-width:960px){
+  .kwr-retreats{
+    padding:80px 6vw;
+    min-height:0;
+  }
+  .kwr-inner{
+    grid-template-columns:1fr;
+    gap:56px;
+  }
+  .kwr-sticky{
+    position:static;
+  }
+  .kwr-img-medium{
+    margin-top:clamp(24px,4vw,48px);
+  }
+}
+@media (max-width:560px){
+  .kwr-collage{
+    grid-template-columns:1fr;
+  }
+  .kwr-img-tall,
+  .kwr-img-medium,
+  .kwr-img-small,
+  .kwr-img-tiny{
+    grid-column:1;
+    grid-row:auto;
+    width:100%;
+    margin-top:0;
+    justify-self:stretch;
+  }
+  .kwr-img-small{
+    aspect-ratio:4/3;
+  }
+  .kwr-cta{
+    width:100%;
+  }
+}
+
+.kwt-community{
+  background:#f7f3ea;
+  padding:110px 6vw;
+}
+.kwt-inner{
+  max-width:1280px;
+  margin:0 auto;
+}
+.kwt-head{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 64px;
+}
+.kwt-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 18px;
+}
+.kwt-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(34px,4.2vw,56px);
+  line-height:.95;
+  color:#22301f;
+  margin:0 0 22px;
+}
+.kwt-heading em{
+  font-style:italic;
+  color:#b98a2e;
+}
+.kwt-sub{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:1.7;
+  color:#4a544a;
+  margin:0;
+}
+
+/* ---- Row 1: video facades ---- */
+.kwt-video-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  margin-bottom:56px;
+}
+.kwt-video-card{
+  border-radius:24px;
+  transition:transform .4s ease, box-shadow .4s ease;
+  will-change:transform;
+}
+.kwt-video-card:hover,
+.kwt-video-card:focus-within{
+  transform:translateY(-4px);
+  box-shadow:0 24px 48px rgba(34,48,31,.18);
+}
+.kwt-video-facade{
+  position:relative;
+  display:block;
+  width:100%;
+  aspect-ratio:9/16;
+  border:0;
+  padding:0;
+  margin:0;
+  border-radius:24px;
+  overflow:hidden;
+  cursor:pointer;
+  background:#22301f;
+}
+.kwt-video-facade img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s ease;
+}
+.kwt-video-facade::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(20,30,18,.55) 0%, rgba(20,30,18,0) 45%);
+  pointer-events:none;
+}
+.kwt-video-card:hover .kwt-video-facade img,
+.kwt-video-facade:focus-visible img{
+  transform:scale(1.04);
+}
+.kwt-video-facade:focus-visible{
+  outline:3px solid #b98a2e;
+  outline-offset:3px;
+}
+.kwt-play{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:64px;
+  height:64px;
+  transform:translate(-50%,-50%);
+  background:rgba(255,255,255,.96);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 24px rgba(20,30,18,.35);
+  transition:transform .4s ease, background .4s ease;
+  z-index:2;
+}
+.kwt-video-card:hover .kwt-play{
+  transform:translate(-50%,-50%) scale(1.08);
+  background:#ffffff;
+}
+.kwt-play-tri{
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:11px 0 11px 18px;
+  border-color:transparent transparent transparent #22301f;
+  margin-left:5px;
+}
+.kwt-video-name{
+  position:absolute;
+  left:22px;
+  bottom:18px;
+  z-index:2;
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:14px;
+  letter-spacing:.08em;
+  color:#f7f3ea;
+}
+
+/* ---- Row 2: quote cards ---- */
+.kwt-quote-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  align-items:stretch;
+}
+.kwt-quote-card{
+  background:#fbf8f1;
+  border:1px solid rgba(34,48,31,.08);
+  border-radius:24px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform .4s ease, box-shadow .4s ease;
+  will-change:transform;
+}
+.kwt-quote-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(34,48,31,.14);
+}
+.kwt-quote-thumb{
+  overflow:hidden;
+  aspect-ratio:16/9;
+}
+.kwt-quote-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s ease;
+}
+.kwt-quote-card:hover .kwt-quote-thumb img{
+  transform:scale(1.04);
+}
+.kwt-quote-body{
+  padding:30px 30px 32px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.kwt-stars span{
+  color:#b98a2e;
+  font-size:16px;
+  letter-spacing:.18em;
+}
+.kwt-quote-text{
+  margin:16px 0 0;
+  flex:1;
+}
+.kwt-quote-text p{
+  font-family:'Jost',sans-serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:15.5px;
+  line-height:1.75;
+  color:#4a544a;
+  margin:0;
+}
+.kwt-quote-name{
+  font-family:'Jost',sans-serif;
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#22301f;
+  margin:22px 0 0;
+}
+
+/* ---- Modal ---- */
+.kwt-modal{
+  position:fixed;
+  inset:0;
+  z-index:1200;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.kwt-modal[hidden]{
+  display:none;
+}
+.kwt-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(28,58,36,.55);
+  backdrop-filter:blur(3px);
+}
+.kwt-modal-panel{
+  position:relative;
+  background:#fbf8f1;
+  border-radius:24px;
+  max-width:460px;
+  width:100%;
+  padding:52px 44px 48px;
+  text-align:center;
+  box-shadow:0 32px 80px rgba(20,30,18,.35);
+  animation:kwt-modal-in .35s cubic-bezier(.22,1,.36,1);
+}
+@keyframes kwt-modal-in{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:none}
+}
+.kwt-modal-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 14px;
+}
+.kwt-modal-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:36px;
+  line-height:.95;
+  color:#22301f;
+  margin:0 0 16px;
+}
+.kwt-modal-title em{
+  font-style:italic;
+  color:#b98a2e;
+}
+.kwt-modal-text{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:15px;
+  line-height:1.7;
+  color:#4a544a;
+  margin:0;
+}
+.kwt-modal-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  color:#22301f;
+  font-size:26px;
+  line-height:1;
+  cursor:pointer;
+  transition:background .3s ease;
+}
+.kwt-modal-close:hover{
+  background:rgba(34,48,31,.08);
+}
+.kwt-modal-close:focus-visible{
+  outline:3px solid #b98a2e;
+  outline-offset:2px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width:960px){
+  .kwt-community{padding:80px 6vw}
+  .kwt-video-row,
+  .kwt-quote-row{
+    grid-template-columns:1fr;
+    max-width:420px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .kwt-video-row{margin-bottom:48px}
+}
+@media (prefers-reduced-motion:reduce){
+  .kwt-video-card,
+  .kwt-quote-card,
+  .kwt-video-facade img,
+  .kwt-quote-thumb img,
+  .kwt-play{transition:none}
+  .kwt-modal-panel{animation:none}
+}
+
+/* ============ NEWSLETTER BAND (kwn-) ============ */
+.kwn-band{
+  background:#f2ede1;
+  padding:110px 6vw;
+}
+.kwn-card{
+  max-width:720px;
+  margin:0 auto;
+  background:#fbf8f1;
+  border:1px solid rgba(34,48,31,.08);
+  border-radius:22px;
+  padding:64px 48px;
+  text-align:center;
+  box-shadow:0 10px 40px rgba(34,48,31,.05);
+}
+.kwn-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-size:10.5px;
+  font-weight:400;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#7a856f;
+  margin:0 0 18px;
+}
+.kwn-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  font-size:clamp(34px,4.4vw,52px);
+  line-height:.95;
+  color:#22301f;
+  margin:0 0 18px;
+}
+.kwn-accent{
+  font-style:italic;
+  color:#b98a2e;
+}
+.kwn-sub{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:1.6;
+  color:#4a544a;
+  margin:0 0 34px;
+}
+.kwn-form{
+  display:flex;
+  align-items:stretch;
+  gap:0;
+  max-width:520px;
+  margin:0 auto;
+  background:#ffffff;
+  border:1px solid rgba(34,48,31,.16);
+  border-radius:999px;
+  padding:5px;
+  transition:box-shadow .4s ease,border-color .4s ease;
+}
+.kwn-form:focus-within{
+  border-color:#1c3a24;
+  box-shadow:0 6px 24px rgba(28,58,36,.12);
+}
+.kwn-input{
+  flex:1 1 auto;
+  min-width:0;
+  min-height:52px;
+  border:0;
+  background:transparent;
+  padding:0 22px;
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:16px;
+  color:#22301f;
+  outline:none;
+}
+.kwn-input::placeholder{color:#7a856f;}
+.kwn-submit{
+  flex:0 0 auto;
+  min-height:52px;
+  padding:0 32px;
+  border:0;
+  border-radius:999px;
+  background:#1c3a24;
+  color:#f7f3ea;
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:14px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:transform .4s ease,box-shadow .4s ease,background-color .4s ease;
+}
+.kwn-submit:hover,.kwn-submit:focus-visible{
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px rgba(28,58,36,.28);
+  background:#22301f;
+}
+.kwn-thanks{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:19px;
+  color:#1c3a24;
+  margin:26px 0 0;
+}
+.kwn-visually-hidden{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;border:0;
+}
+@media (max-width:640px){
+  .kwn-band{padding:80px 6vw;}
+  .kwn-card{padding:48px 24px;}
+  .kwn-form{
+    flex-direction:column;
+    gap:10px;
+    border-radius:28px;
+    padding:10px;
+  }
+  .kwn-input{text-align:center;min-height:48px;}
+  .kwn-submit{width:100%;}
+}
+
+/* ============ RAINFOREST FOOTER (kwf-) ============ */
+.kwf-footer{
+  position:relative;
+  overflow:hidden;
+  background:#14261a url('assets/site/img/gen/bg_footer_jungle.jpg') center / cover no-repeat;
+  color:#f2ede1;
+}
+.kwf-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(20,38,26,.92) 0%,rgba(20,38,26,.72) 34%,rgba(13,26,17,.82) 100%);
+  pointer-events:none;
+}
+.kwf-leaf{
+  position:absolute;
+  top:0;
+  width:min(220px,26vw);
+  height:auto;
+  opacity:.35;
+  pointer-events:none;
+  z-index:1;
+}
+.kwf-leaf-left{
+  left:0;
+  transform:translate(-32%,-24%) rotate(18deg);
+}
+.kwf-leaf-right{
+  right:0;
+  transform:translate(32%,-24%) rotate(-108deg) scaleX(-1);
+}
+.kwf-inner{
+  position:relative;
+  z-index:2;
+  max-width:1280px;
+  margin:0 auto;
+  padding:110px 6vw 0;
+}
+.kwf-top{
+  text-align:center;
+  margin-bottom:70px;
+}
+.kwf-brand{
+  display:inline-block;
+  text-decoration:none;
+}
+.kwf-wordmark{
+  width:min(300px,64vw);
+  height:auto;
+  filter:brightness(0) invert(1);
+  opacity:.96;
+}
+.kwf-tag{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(17px,2vw,21px);
+  line-height:1.5;
+  color:rgba(242,237,225,.82);
+  max-width:520px;
+  margin:22px auto 0;
+}
+.kwf-cols{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px 32px;
+  padding-bottom:78px;
+  border-bottom:1px solid rgba(242,237,225,.16);
+}
+.kwf-col-title{
+  font-family:'Jost',sans-serif;
+  font-weight:400;
+  font-size:10.5px;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#b98a2e;
+  margin:0 0 20px;
+}
+.kwf-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.kwf-link{
+  display:inline-block;
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:15.5px;
+  line-height:1.5;
+  color:#f2ede1;
+  text-decoration:none;
+  padding:6px 0;
+  transition:color .4s ease,transform .4s ease;
+}
+.kwf-link:hover,.kwf-link:focus-visible{
+  color:#b98a2e;
+  transform:translateX(4px);
+}
+.kwf-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  padding:30px 0 34px;
+}
+.kwf-copy,.kwf-origin{
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  font-size:13px;
+  letter-spacing:.06em;
+  color:rgba(242,237,225,.72);
+  margin:0;
+}
+.kwf-origin{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:15px;
+  color:rgba(242,237,225,.85);
+}
+@media (max-width:900px){
+  .kwf-cols{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:640px){
+  .kwf-inner{padding-top:84px;}
+  .kwf-top{margin-bottom:54px;}
+  .kwf-cols{gap:34px 20px;padding-bottom:56px;text-align:left;}
+  .kwf-bottom{justify-content:center;text-align:center;}
+  .kwf-leaf{width:34vw;opacity:.28;}
+}
+</style>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -192,6 +2120,130 @@ if (document.readyState === 'complete') initHero();
 else window.addEventListener('load', initHero);
 
 document.querySelectorAll('img').forEach(im => im.addEventListener('error', () => { im.style.background='linear-gradient(135deg,#1c3a24,#3a5a40)'; }));
+
+/* global section reveal */
+document.documentElement.classList.add('js');
+const kwObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); kwObs.unobserve(e.target); } }), { threshold: 0.12 });
+const kwWatch = () => document.querySelectorAll('.kw-reveal:not(.in)').forEach(el => kwObs.observe(el));
+(function () {
+  var track = document.getElementById('kwb-track');
+  var prev = document.getElementById('kwb-prev');
+  var next = document.getElementById('kwb-next');
+  if (!track || !prev || !next) return;
+
+  function step() {
+    var card = track.querySelector('.kwb-card');
+    if (!card) return 320;
+    var gap = 28;
+    try {
+      var styles = window.getComputedStyle(track);
+      var g = parseFloat(styles.columnGap || styles.gap);
+      if (!isNaN(g)) gap = g;
+    } catch (e) {}
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function updateArrows() {
+    var max = track.scrollWidth - track.clientWidth - 2;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max;
+  }
+
+  prev.addEventListener('click', function () {
+    track.scrollBy({ left: -step(), behavior: 'smooth' });
+  });
+  next.addEventListener('click', function () {
+    track.scrollBy({ left: step(), behavior: 'smooth' });
+  });
+
+  var ticking = false;
+  track.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () {
+      updateArrows();
+      ticking = false;
+    });
+  }, { passive: true });
+
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+})();
+
+(function () {
+  var section = document.getElementById('kwt-community');
+  if (!section) return;
+
+  var modal = document.getElementById('kwt-modal');
+  if (!modal) return;
+
+  var lastFocused = null;
+
+  function openModal() {
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    var closeBtn = modal.querySelector('.kwt-modal-close');
+    if (closeBtn) closeBtn.focus();
+    document.addEventListener('keydown', onKeydown);
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.documentElement.style.overflow = '';
+    document.removeEventListener('keydown', onKeydown);
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  }
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+      return;
+    }
+    if (e.key === 'Tab') {
+      var focusables = modal.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+      if (!focusables.length) return;
+      var first = focusables[0];
+      var last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }
+
+  var facades = section.querySelectorAll('.kwt-video-facade');
+  for (var i = 0; i < facades.length; i++) {
+    facades[i].addEventListener('click', function () {
+      openModal();
+    });
+  }
+
+  var closers = modal.querySelectorAll('[data-kwt-close]');
+  for (var j = 0; j < closers.length; j++) {
+    closers[j].addEventListener('click', closeModal);
+  }
+})();
+
+(function(){
+  var form = document.querySelector('#kwn-newsletter .kwn-form');
+  if(!form) return;
+  var thanks = document.querySelector('#kwn-newsletter .kwn-thanks');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var input = form.querySelector('.kwn-input');
+    if(input && !input.checkValidity()){
+      if(typeof input.reportValidity === 'function') input.reportValidity();
+      return;
+    }
+    form.setAttribute('hidden','');
+    if(thanks) thanks.removeAttribute('hidden');
+  });
+})();
+kwWatch();
 </script>
 </body>
 </html>
